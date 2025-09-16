@@ -20,7 +20,7 @@ namespace SalesWEBMVC.Controllers
 
         public IActionResult About()
         {
-            ViewData["Mensagem"] = "Sistema de estudos C#";
+            ViewData["Mensagem"] = "Sistema de estudos C# iniciante";
             ViewData["Aluno"] = "Robson César Diniz";
             return View();
         }
