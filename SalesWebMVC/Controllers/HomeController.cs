@@ -18,9 +18,18 @@ namespace SalesWEBMVC.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult About()
         {
+            ViewData["Mensagem"] = "Sistema de estudos C#";
+            ViewData["Aluno"] = "Robson César Diniz";
             return View();
+        }
+
+        public IActionResult Privacy()
+
+        {
+            ViewData["mensagem"] = "Rubinho Diniz";
+                return View();
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
