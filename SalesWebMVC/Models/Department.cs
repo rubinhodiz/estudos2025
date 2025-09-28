@@ -1,7 +1,7 @@
 ﻿using System.Data;
 using System.Linq;
 
-namespace SalesWEBMVC.Models
+namespace SalesWEBMvc.Models
 {
     public class Department
     {

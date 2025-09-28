@@ -1,10 +1,11 @@
-﻿using SalesWEBMVC.Data;
+﻿using SalesWEBMvc.Models;
 using SalesWEBMVC.Models;
-namespace SalesWEBMVC.Services
+using SalesWEBMVC.Data;
+namespace SalesWEBMvc.Services
 {
     public class SellerService
     {
-        private readonly Data.SalesWEBMVCContext _context;
+        private readonly SalesWEBMVCContext _context;
 
         public SellerService(SalesWEBMVCContext context)
         {
@@ -18,7 +19,7 @@ namespace SalesWEBMVC.Services
 
         public void Insert(Seller obj)
         {
-            obj.Department = _context.Department.First();
+          //  obj.Department = _context.Department.First();
             _context.Add(obj);
             _context.SaveChanges();
         }
