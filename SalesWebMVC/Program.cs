@@ -1,6 +1,7 @@
 
 using Microsoft.EntityFrameworkCore;
-
+using System.Globalization;
+using Microsoft.AspNetCore.Localization;
 using SalesWEBMvc.Services;
 using SalesWEBMVC.Data;
 
@@ -21,6 +22,17 @@ builder.Services.AddScoped<SellerService>();
 builder.Services.AddScoped<DepartmentService>();
 
 var app = builder.Build();
+
+var enUS = new CultureInfo("en-US");
+var localizationOptions = new RequestLocalizationOptions
+{
+    DefaultRequestCulture = new RequestCulture(enUS),
+    SupportedCultures = new List<CultureInfo> { enUS },
+    SupportedUICultures = new List<CultureInfo> { enUS }
+};
+
+app.UseRequestLocalization(localizationOptions);    
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

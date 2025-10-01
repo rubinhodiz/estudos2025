@@ -3,13 +3,13 @@
 @model IEnumerable<SalesWEBMvc.Models.Seller>
 
 @{
-    ViewData["Title"] = "Sellers";
+    ViewData["Title"] = "Vendedores";
 }
 
 <h2>@ViewData["Title"]</h2>
 
 <p>
-    <a asp-action="Create" class="btn btn-defautl">Create New</a>
+    <a asp-action="Create" class="btn btn-info">Criar Novo</a>
 </p> 
 
 <!-- CABEÇALHO DA TABELA -->
@@ -50,13 +50,13 @@
                     @Html.DisplayFor(modelItem => item.baseSalary)
                 </td>
                 <td>
-                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a>
+                <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Editar</a>
                 </td>
                 <td>
-                <a asp-action="Details" asp-route-id="@item.Id">Detalhe</a>
+                <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info">Detalhe</a>
                 </td>
                 <td>
-                    <a asp-action="Delete" asp-route-id="@item.Id">Deletar</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Deletar</a>
                 </td>
             </tr>
           
@@ -65,5 +65,6 @@
 
 
 </table>
-
-<p>Sellers index page</p>
+</br>
+</br>
+<p>Home Vendedores</p>
